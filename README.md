@@ -1,3 +1,5 @@
+# Bank Application v.0.3
+    *Added a new submenu for application model's menu.
 # Bank Application v.0.2
     *Created bank application model.
     *Added main menu selections and given them inputs.

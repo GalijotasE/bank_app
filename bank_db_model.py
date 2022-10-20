@@ -14,6 +14,12 @@ class Person(Base):
     phone_number = Column("phone_number", String)
     accounts = relationship("Account", back_populates="user")
 
+    def __init__(self, first_name, last_name, personal_code, phone_number):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.personal_code = personal_code
+        self.phone_number = phone_number
+
     def __repr__(self):
         return f"({self.id}, {self.first_name}, {self.last_name}, {self.personal_code}, {self.phone_number}"
 

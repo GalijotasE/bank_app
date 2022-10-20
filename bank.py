@@ -22,9 +22,16 @@ while True:
         print("a - insert new account to the database")
         print("r - Return to a menu screen")
         action = input("Please choose: ").casefold()
+        # Add new user to the database
         if action =="u":
             print("---Add New User To The Database---")
-            pass
+            f_name = input("First Name: ")
+            l_name = input("Last Name: ")
+            p_code = input("Personal Code: ")
+            p_number = input("Phone Number: ")
+            
+
+
         elif action == "b":
             print("---Add New Bank To The Database---")
             pass

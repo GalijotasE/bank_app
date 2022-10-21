@@ -31,6 +31,11 @@ class Bank(Base):
     swift = Column("swift", String)
     accounts = relationship("Account", back_populates = "banks")
 
+    def __init__(self, name, address, swift):
+        self.name = name
+        self.address = address
+        self.swift = swift
+
     def __repr__(self):
         return f"({self.id}, {self.name}, {self.address}, {self.swift}, {self.accounts})"
 
@@ -44,9 +49,15 @@ class Account(Base):
     user = relationship("Person", back_populates = "accounts")
     banks = relationship("Bank", back_populates = "accounts")
 
+    def __init__(self, account_number, balance, user_id, bank_id):
+        self.account_number = account_number
+        self.balance = balance
+        self.user_id = user_id
+        self.bank_id = bank_id
+
     def __repr__(self):
         return f"({self.id}, {self.account_number}, {self.balance})"
 
-Base.metadata.drop_all(engine)
+#Base.metadata.drop_all(engine)
 Base.metadata.create_all(engine)
 

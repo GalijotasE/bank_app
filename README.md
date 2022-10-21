@@ -1,3 +1,10 @@
+# Bank Application v.0.6
+    *Added a function where app user can view all bank users.
+    *Added a function where app user can view all banks.
+    *Added a function where app user can view all bank accounts.
+    *Added a function where app user can add new bank users.
+    *Added a function where app user can add new banks.
+    *Added a function where app user can add new bank accounts.
 # Bank Application v.0.3
     *Added a few submenu's for application model's menu.
     *Made a couple of minor improvements for smoother and errorless use.
